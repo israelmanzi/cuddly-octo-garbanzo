@@ -29,8 +29,5 @@ jobs:
               if: failure()
               run: exit 1
 
-            - name: Run lint-fix
-              run: npm run lint-fix
-
             - name: Build
               run: npm run build

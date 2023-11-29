@@ -34,5 +34,5 @@ export const ENV_VARS = {
     NODE_ENV: process.env.NODE_ENV || 'development',
     MONGO_URI:
         process.env.MONGO_URI ||
-        'mongodb+srv://root:RY8aEmC80Fz4UKE7@dev-cl.qs1epes.mongodb.net/?retryWrites=true&w=majority',
+        'mongodb://localhost:27017/cuddly-octo-garbanzo',
 };
