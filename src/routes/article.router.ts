@@ -8,6 +8,8 @@ const articleController: ArticleController = new ArticleController();
 router
     .get('/', articleController.getArticles)
     .get('/:id', articleController.getArticle)
-    .post('/', articleController.createArticle);
+    .post('/', articleController.createArticle)
+    .put('/:id', articleController.updateArticle)
+    .delete('/:id', articleController.deleteArticle);
 
 export default router;

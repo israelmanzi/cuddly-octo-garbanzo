@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-dotenv.config();
+dotenv.config({ path: '../.env.example' });
 
 export const connectToDB = async (): Promise<void> => {
     try {
@@ -34,5 +34,5 @@ export const ENV_VARS = {
     NODE_ENV: process.env.NODE_ENV || 'development',
     MONGO_URI:
         process.env.MONGO_URI ||
-        'mongodb://localhost:27017/cuddly-octo-garbanzo',
+        'mongodb+srv://root:RY8aEmC80Fz4UKE7@dev-cl.qs1epes.mongodb.net/?retryWrites=true&w=majority',
 };
