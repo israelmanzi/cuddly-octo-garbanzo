@@ -2,11 +2,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-dotenv.config({ path: '../.env.example' });
+dotenv.config();
 
 export const connectToDB = async (): Promise<void> => {
     try {
         console.info('Connecting to MongoDB ...');
+        console.log(ENV_VARS.MONGO_URI);
         await mongoose
             .connect(ENV_VARS.MONGO_URI, {
                 autoCreate: true,
