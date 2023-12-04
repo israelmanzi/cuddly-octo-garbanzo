@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
-dotenv.config({ path: '../.env.example' });
+dotenv.config();
 
 export const connectToDB = async (): Promise<void> => {
     try {
@@ -19,7 +19,7 @@ export const connectToDB = async (): Promise<void> => {
 
         mongoose.connection
             .on('error', (err) => {
-                console.error(err);
+                console.error(err.message);
             })
             .on('disconnected', () => {
                 console.info('Disconnected from MongoDB!');
