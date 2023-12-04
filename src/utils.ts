@@ -20,7 +20,7 @@ export const connectToDB = async (): Promise<void> => {
 
         mongoose.connection
             .on('error', (err) => {
-                console.error(err);
+                console.error(err.message);
             })
             .on('disconnected', () => {
                 console.info('Disconnected from MongoDB!');
